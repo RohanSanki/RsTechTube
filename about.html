@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style> * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f9f9f9;
+    }
+
+    header {
+        background-color: #007BFF;
+        color: white;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        color: white;
+        margin-left: 1rem;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 4rem 2rem;
+        background: linear-gradient(to right, #007BFF, #00BFFF);
+        color: white;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 2rem;
+        background-color: white;
+    }
+
+    .feature {
+        background: #f1f1f1;
+        border-radius: 8px;
+        padding: 1.5rem;
+        margin: 1rem;
+        flex: 1 1 250px;
+        max-width: 300px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature h3 {
+        margin-bottom: 0.5rem;
+        color: #007BFF;
+    }
+
+    footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #333;
+        color: white;
+    }
+
+    @media (max-width: 600px) {
+        .hero h2 {
+            font-size: 2rem;
+        }
+
+        .features {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <header>
+        <h1>RSTechHub</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="D:\Projects\School Project duplicate\4.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+        <h2>Here you can make your website</h2>
+            <p>My name is Rohan Sanki I will make website for you. Only you have to sent me your requerments by filling up this form and submit us </p>
+        </section>
+        <section class="features">
+            <div class="feature">
+                <h3>Question</h3>
+                <p><b>How to get Form?</b></p><br>
+                <p><b>Ans:&rarr;</b>To get the form you have to click the "Get Form" from here </p>
+            </div>
+            <br>
+            <h4><a href="">Get Form</h4>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy;RSTechHub|2025 All Right Reserved</p>
+    </footer>
+    <script>// Smooth Scroll
+        document.querySelectorAll('a[href^="#"], a[href$=".html"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Check if it's a link to an ID or a page
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+        
+        // Page Load Animation
+        window.addEventListener('load', () => {
+            document.body.classList.add('page-loaded');
+        });
+        
+        // Hover animation on nav links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('mouseenter', () => {
+                link.classList.add('hover-animate');
+            });
+            link.addEventListener('mouseleave', () => {
+                link.classList.remove('hover-animate');
+            });
+        });
+        </script>
+</body>
+
+</html>
